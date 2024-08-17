@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300&family=Workbench&display=swap" 
+    rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./contact.css">
+    <script src="./scripts.js"></script>
+    <link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+</head>
+<body class="dark">
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo"></div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+            <nav>
+                <ul id="menu">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./skills.html">Skills</a>
+                </li>
+                <li>
+                    <a href="./projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="#" class="button">Contact</a>
+                </li>
+            </ul>
+               
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="contact-heading">
+                        <h1 class="head">Let's catch up <span>!</span></h1>
+                        <p class="text">Or reach me via : <a href="mailto:vnshiva2004@gmail.com">vnshiva2004@gmail.com</a></p>
+                    </div>
+
+                    <form name="submit-to-google-sheet" action="contact.html" class="contact-form">
+                        <div class="input-wrap">
+
+                            <input class="contact-input" autocomplete="off" 
+                            name="First Name" type="text" required>
+                            <label>Full Name</label>
+                            <ion-icon class="icon" name="person-outline"></ion-icon>
+                        </div>
+
+
+                        <div class="input-wrap w-100">
+                            <input class="contact-input" autocomplete="off" 
+                            name="Email" type="text" required>
+                            <label>Email</label>
+                            <ion-icon class="icon" name="mail-unread-outline"></ion-icon>
+                        </div>
+
+
+                        <div class="input-wrap textarea w-100">
+                            <textarea name="Message" autocomplete="off"
+                            class="contact-input" required></textarea>
+                            <label>Message</label>
+                            <ion-icon class="icon" name="chatbubbles-outline"></ion-icon>
+                        </div>
+
+
+                        <div class="contact-buttons">
+                            <button class="btn upload">
+                                <span>
+                                    <i class="fa-solid fa-paperclip"></i> Add attachment
+                                </span>
+                                <input type="file" name="attachment">
+                            </button>
+                            <button class="btn upload" action="submit" type="submit" name="submit">
+                                <span>
+                                    <ion-icon class="icon" name="send-outline"></ion-icon> Send Message
+                                </span>
+                            </button> <br>
+                            <span class="success" id="success"></span>
+                        </div>
+             
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script src="scripts.js"></script>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyta9uzOzI-husSS07BG_liUaJlxbmv5yXDGOcgIWXsCpyBJaf_agHu1u6Kz6VD9vVU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const success = document.getElementById('success');
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                success.innerHTML="Messaage sent successfully";
+
+                setTimeout(function(){
+                    success.innerHTML="";
+                },5000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+</html>

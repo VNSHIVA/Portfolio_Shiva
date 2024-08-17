@@ -1,0 +1,331 @@
+ *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+a{
+    text-decoration: none;
+}
+  padding: 0;
+}
+#projects{
+    background: rgb(255,255,255);
+    height: 100vh;
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,217,68,1) 100%);
+}
+a{
+    text-decoration: none;
+}
+header .logo-text{
+  color: rgb(0, 240, 184);
+  text-decoration: none;
+}
+
+header{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+  color: white;
+  border-bottom: 5px solid rgb(240, 238, 238);
+
+  .logo-holder{
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      font-weight: 600;
+      color: white;
+      height: 64px;
+      width: 64;
+      margin-right: 20px;
+      border-radius: 50%;
+  }
+
+  nav{
+      display: flex;
+      align-items: center;
+      ul {
+          display: flex;
+          list-style-type: none;
+          gap: 5px;
+          li{
+              display: inline-block;
+              a{
+                  display: inline-block;
+                  padding: 10px 20px;
+                  color: rgb(27, 214, 167);
+                  &:hover {
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 10px;
+                    color: rgb(229, 218, 218);
+                    text-decoration: none;
+                }
+              }
+          }
+      }
+  }
+
+  @media(max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  @media(max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      nav {
+          margin-top: 10px;
+          width: 100%;
+          ul{
+              display: none;
+              flex-direction: column;
+              text-align: center;
+              width: 100%;
+              a{
+                  width: 100%;
+              }
+              &.active {
+                  display: flex;
+              }
+          }
+      }
+  }
+}
+h3{
+   font-size: 25px;
+}
+h1{
+    font-size: 36px;
+}
+.container{
+    margin-left: 220px;
+    display: flex;
+    /* background-color: green; */
+    width: 80vw;
+    height: 80vh;
+}
+.bottom-row{
+    width: 80vw;
+    align-items: center;
+    
+    display: flex;
+}
+.gallery-filter{
+    /* background-color: red; */
+    display: flex;
+    height: 30vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    /* justify-content: space-between; */
+    gap: 25px;
+}
+button{
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background: #16f0d6;
+}
+
+.floor{
+    overflow: hidden;
+    padding: 15px;
+}
+.gallery-items{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: blue; */
+    overflow-x: scroll;
+}.gallery-item{
+    /* background-color: yellow; */
+    width: 450px;
+    border-radius: 25px;
+    
+}
+.gallery-item img{
+    width: 450px;
+    height: 250px;
+}
+
+.gallery-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#Apps, #Webs, #Photo{
+    display: flex;
+    gap: 10px;
+}
+
+img:hover{
+    transform: scale(1.025);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #32cb9a;
+    
+}
+
+#fuck{
+    background-image: url(./imgs/Hero.jpeg);
+}
+
+
+
+
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #5ddaa3;
+    font-size: 20px;
+    /* background-color: #550c0c; */
+   
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+header .logo-text{
+    color: #32cb9a;
+}
+.menu a{
+    color: #5ddaa3;
+}
+a{
+    color: #5ddaa3;
+}
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
+    color: #5ddaa3;
+    border-bottom: 5px solid rgb(240, 238, 238);
+
+    .logo-holder{
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        font-weight: 600;
+        color: #5ddaa3;
+        height: 64px;
+        width: 64;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 5px;
+            li{
+                display: inline-block;
+                a{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: #5ddaa3;
+                    &:hover {
+                        background-color: #5ddaa3;
+                        border-radius: 10px;
+                        color: #014644;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none   ;
+    }
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        nav {
+            margin-top: 10px;
+            width: 100%;
+            ul{
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                a{
+                    width: 100%;
+                }
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+button{
+   color: #000000;
+    background-color: #16f016;
+    border-radius: 25px;
+  }
+  button:hover{
+      color: #32cb9a;
+      background-color: #000000;
+  }
+  #Apps, #Webs, #Photo{
+    padding: 20px;
+  }
+  .gallery-item{
+    padding: 20px;
+    background-color: #fff;
+  }
+  .gallery-item img{
+   border-radius: 25px;
+   width: 400px;
+  }
+  .details{
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container{
+    margin: 70px;
+    margin-left: 200px;
+
+    border: 5px solid #00ff22;
+    border-radius: 50px;
+    backdrop-filter: blur(25px);
+    background-color: transparent;
+  }
